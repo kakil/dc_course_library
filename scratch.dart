@@ -1,4 +1,8 @@
+import 'package:flutter/foundation.dart';
+
 void main() {
-  var name = 'Kit';
-  print(name);
+  const String name = 'Kit';
+  if (kDebugMode) {
+    print(name);
+  }
 }
