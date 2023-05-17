@@ -8,7 +8,7 @@ import '../screens/profile_screen.dart';
 class HomeScreenNavBar extends StatelessWidget {
   const HomeScreenNavBar({super.key, required this.triggerAnimation});
 
-  final Function triggerAnimation;
+  final VoidCallback triggerAnimation;
 
   @override
   Widget build(BuildContext context) {
