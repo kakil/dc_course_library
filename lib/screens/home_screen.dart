@@ -1,24 +1,23 @@
-import 'package:dc_course_library/screens/sidebar_screens.dart';
+import 'package:dc_course_library/screens/sidebar_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../components/homescreennavbar.dart';
-import '../components/lists/explorecourselist.dart';
-import '../components/lists/recentcourselist.dart';
+import '../components/home_screen_navbar.dart';
+import '../components/lists/explore_course_list.dart';
+import '../components/lists/recent_course_list.dart';
 import '../constants.dart';
+import 'continue_watching_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({
-    super.key,
-  });
+  const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  // ignore: library_private_types_in_public_api
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late Animation<Offset> sidebarAnimation;
-  late AnimationController sidebarAnimationController;
   late Animation<double> fadeAnimation;
+  late AnimationController sidebarAnimationController;
 
   var sidebarHidden = true;
 
@@ -115,6 +114,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
             ),
+            const ContinueWatchingScreen(),
             IgnorePointer(
               ignoring: sidebarHidden,
               child: Stack(

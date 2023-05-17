@@ -3,6 +3,7 @@ import 'package:dc_course_library/components/sidebar_button.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+import '../screens/profile_screen.dart';
 
 class HomeScreenNavBar extends StatelessWidget {
   const HomeScreenNavBar({super.key, required this.triggerAnimation});
@@ -24,10 +25,18 @@ class HomeScreenNavBar extends StatelessWidget {
             Icons.notifications,
             color: kPrimaryLabelColor,
           ),
-          const SizedBox(width: 16.0),
-          const CircleAvatar(
-            radius: 18.0,
-            backgroundImage: AssetImage('asset/images/profile.jpg'),
+          const SizedBox(
+            width: 16.0,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ProfileScreen()));
+            },
+            child: const CircleAvatar(
+              radius: 18.0,
+              backgroundImage: AssetImage('asset/images/profile.jpg'),
+            ),
           ),
         ],
       ),

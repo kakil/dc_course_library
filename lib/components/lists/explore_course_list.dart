@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../model/course.dart';
-import '../cards/explorecoursecard.dart';
+import '../cards/explore_course_card.dart';
 
 class ExploreCourseList extends StatelessWidget {
   const ExploreCourseList({super.key});
@@ -17,9 +17,7 @@ class ExploreCourseList extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(left: index == 0 ? 20.0 : 0.0),
-            child: ExploreCourseCard(
-              course: exploreCourses[index],
-            ),
+            child: ExploreCourseCard(course: exploreCourses[index]),
           );
         },
       ),

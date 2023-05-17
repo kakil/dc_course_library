@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class SidebarButton extends StatelessWidget {
-  const SidebarButton({
-    super.key,
-    required this.triggerAnimation,
-  });
+  const SidebarButton({super.key, required this.triggerAnimation});
 
   final Function triggerAnimation;
 
@@ -30,7 +27,7 @@ class SidebarButton extends StatelessWidget {
                 color: kShadowColor,
                 offset: Offset(0, 12),
                 blurRadius: 16.0,
-              ),
+              )
             ]),
         padding: const EdgeInsets.symmetric(
           horizontal: 12.0,
